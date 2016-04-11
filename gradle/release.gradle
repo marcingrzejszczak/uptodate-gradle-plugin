@@ -1,0 +1,36 @@
+apply plugin: 'maven'
+apply plugin: 'com.bmuschko.nexus'
+
+modifyPom {
+	project {
+		name "$project.name"
+		packaging 'jar'
+		description 'Gradle plugin that tells you what libs have new versions in Maven Central / JCenter'
+		url 'https://github.com/marcingrzejszczak/uptodate'
+		inceptionYear '2016'
+
+		scm {
+			connection 'git@github.com:marcingrzejszczak/uptodate.git'
+			developerConnection 'git@github.com:marcingrzejszczak/uptodate.git'
+			url 'https://github.com/marcingrzejszczak/uptodate'
+		}
+
+		licenses {
+			license {
+				name 'The Apache License, Version 2.0'
+				url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+			}
+		}
+
+		developers {
+			developer {
+				id 'marcingrzejszczak'
+				name 'Marcin Grzejszczak'
+				email 'marcin ATT grzejszczak DOTT pl'
+			}
+		}
+	}
+}
+
+uploadArchives.dependsOn { check }
+

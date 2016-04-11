@@ -12,7 +12,6 @@ cache:
   - $HOME/.m2
 
 env:
-  - GRADLE_VERSION=1.12
   - GRADLE_VERSION=2.4
   - GRADLE_VERSION=2.5
   - GRADLE_VERSION=2.6

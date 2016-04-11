@@ -63,10 +63,10 @@ Changes to plugin configuration DSL:
 -----
 New features:
 * verification of versions against JCenter
-* plugin available at http://plugins.gradle.org - see http://plugins.gradle.org/plugin/com.ofg.uptodate
+* plugin available at http://plugins.gradle.org - see http://plugins.gradle.org/plugin/com.toomuchcoding.uptodate
 
 Breaking changes:
-* renamed plugin from `uptodate` to `com.ofg.uptodate`
+* renamed plugin from `uptodate` to `com.toomuchcoding.uptodate`
 
 0.0.6
 -----
