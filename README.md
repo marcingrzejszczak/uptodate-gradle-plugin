@@ -1,6 +1,27 @@
-[![Build Status](https://travis-ci.org/4finance/uptodate-gradle-plugin.svg?branch=master)](https://travis-ci.org/4finance/uptodate-gradle-plugin) [![Coverage Status](http://img.shields.io/coveralls/4finance/uptodate-gradle-plugin/master.svg)](https://coveralls.io/r/4finance/uptodate-gradle-plugin)
-[ ![Download](https://api.bintray.com/packages/4finance/uptodate-gradle-plugin/uptodate-gradle-plugin/images/download.svg) ](https://bintray.com/4finance/uptodate-gradle-plugin/uptodate-gradle-plugin/_latestVersion)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/4finance/uptodate-gradle-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Build Status](https://travis-ci.org/marcingrzejszczak/uptodate-gradle-plugin.svg?branch=master)](https://travis-ci.org/marcingrzejszczak/uptodate-gradle-plugin) [![Coverage Status](http://img.shields.io/coveralls/marcingrzejszczak/uptodate-gradle-plugin/master.svg)](https://coveralls.io/r/4finance/uptodate-gradle-plugin)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marcingrzejszczak/uptodate-gradle-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+# NOTE
+
+The project has been forked since it has no longer been maintained at its original source. Also, since I'm the author of the majority
+of the code I have decided to migrate it to my organization.
+
+Also I've dropped support for Gradle < 2.0
+
+## MIGRATION
+
+Just change 
+
+```
+com.ofg
+```
+
+to
+
+```
+com.toomuchcoding
+```
+
 
 uptodate-gradle-plugin
 ======================
@@ -26,23 +47,21 @@ New versions available:
 
 ### How to install it?
 
-Latest version is [ ![Download](https://api.bintray.com/packages/4finance/uptodate-gradle-plugin/uptodate-gradle-plugin/images/download.svg) ](https://bintray.com/4finance/uptodate-gradle-plugin/uptodate-gradle-plugin/_latestVersion) . You can change `+` to some other version to have a concrete one instead of a latest one.
-
-#### Step 1: Add dependency to JCenter and to the plugin
+#### Step 1: Add dependency to Maven Central and to the plugin
 ```
 buildscript {
     repositories {	
-        jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.ofg:uptodate-gradle-plugin:+'
+        classpath 'com.toomuchcoding:uptodate-gradle-plugin:+'
     }
 }
 ```
 
 #### Step 2: Add the plugin to your build (gradle.build)
 ```
-apply plugin: 'com.ofg.uptodate'
+apply plugin: 'com.toomuchcoding.uptodate'
 ```
 
 And now you can run the plugin with
@@ -71,12 +90,12 @@ Please note that excludes take precedence over includes.
 ### How to exclude non-final versions from reported updates?
 
 You can also provide patterns of versions that you would like to exclude.
-There are also some patterns (like BETA, RC, etc.) defined in com.ofg.uptodate.UptodatePluginExtension.VersionPatterns
+There are also some patterns (like BETA, RC, etc.) defined in com.toomuchcoding.uptodate.UptodatePluginExtension.VersionPatterns
 
 By default following patterns are excluded: ALPHA, BETA, RC, CR, SNAPSHOT, MILESTONE, RELEASE( i.e. r08)
 
 ```
-import static com.ofg.uptodate.VersionPatterns.*
+import static com.toomuchcoding.uptodate.VersionPatterns.*
 
 uptodate {
     setExcludedVersionPatterns ALPHA, BETA, '.*-demo-?\\d*$'
