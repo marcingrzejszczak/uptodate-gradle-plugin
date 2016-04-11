@@ -40,7 +40,7 @@ apply plugin: 'maven-publish'
 
 group = 'com.toomuchcoding'
 description = 'Core of UpToDate plugin'
-project.version = scmVersion.version
+project.version = '1.0.0'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
