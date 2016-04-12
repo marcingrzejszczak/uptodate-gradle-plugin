@@ -25,7 +25,7 @@ nexusStaging {
 apply plugin: "pl.allegro.tech.build.axion-release"
 
 scmVersion {
-    tag { prefix = "uptodate/" }
+    tag { prefix = "uptodate" }
     createReleaseCommit = true
     releaseCommitMessage { version, position -> "Release version: ${version}\n\n[ci skip]" }
     nextVersion {
