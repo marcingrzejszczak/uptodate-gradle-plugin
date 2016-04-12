@@ -28,11 +28,6 @@ scmVersion {
     tag { prefix = "uptodate/" }
     createReleaseCommit = true
     releaseCommitMessage { version, position -> "Release version: ${version}\n\n[ci skip]" }
-    hooks {
-        pre "fileUpdate", [file       : "README.adoc",
-                           pattern    : { v, p -> /:lib_version:.*/ },
-                           replacement: { v, p -> ":lib_version: $v" }]
-    }
 }
 
 apply plugin: 'groovy'
