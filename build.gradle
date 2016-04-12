@@ -28,6 +28,9 @@ scmVersion {
     tag { prefix = "uptodate/" }
     createReleaseCommit = true
     releaseCommitMessage { version, position -> "Release version: ${version}\n\n[ci skip]" }
+    nextVersion {
+        separator = ''
+    }
 }
 
 apply plugin: 'groovy'
